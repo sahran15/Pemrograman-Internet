@@ -1,0 +1,184 @@
+/* ===== RESET & BASE ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #eef2f9;
+  color: #1c2b4a;
+  line-height: 1.5;
+}
+a { text-decoration: none; }
+
+#sahran_page {
+  max-width: 1000px;
+  margin: 24px auto;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(20, 50, 110, .12);
+}
+
+/* ===== HEADER ===== */
+#sahran_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 32px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #e6ecf6;
+}
+.sahran_logo { font-size: 18px; color: #1c2b4a; font-weight: 600; }
+.sahran_logo b { color: #1d4ed8; }
+.sahran_logo_icon { color: #1d4ed8; font-weight: 800; margin-right: 4px; }
+.sahran_menu { display: flex; gap: 28px; }
+.sahran_menu_link { color: #1c2b4a; font-size: 14px; font-weight: 600; padding-bottom: 4px; }
+.sahran_menu_link:hover,
+.sahran_active { color: #1d4ed8; border-bottom: 2px solid #1d4ed8; }
+
+/* ===== HERO ===== */
+#sahran_home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 40px 48px;
+  background: linear-gradient(120deg, #f4f8ff 0%, #dbe8ff 100%);
+  min-height: 330px;
+}
+.sahran_hero_text { flex: 1; }
+.sahran_hello { font-size: 22px; font-weight: 500; }
+.sahran_name { font-size: 44px; line-height: 1.1; color: #1d4ed8; margin: 4px 0 10px; }
+.sahran_role { font-weight: 600; color: #33415c; margin-bottom: 12px; }
+.sahran_intro { font-size: 14px; color: #4a5775; max-width: 380px; margin-bottom: 20px; }
+.sahran_buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.sahran_btn {
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform .2s, box-shadow .2s;
+}
+.sahran_btn:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(29, 78, 216, .25); }
+.sahran_btn_primary { background: #1d4ed8; color: #fff; }
+.sahran_btn_outline { background: #fff; color: #1d4ed8; border: 2px solid #1d4ed8; }
+
+/* Hero image (laptop built with CSS) */
+.sahran_hero_image { position: relative; flex: 1; height: 250px; display: flex; justify-content: center; align-items: center; }
+.sahran_blob {
+  position: absolute;
+  width: 330px; height: 250px;
+  background: #fff;
+  opacity: .7;
+  border-radius: 60% 40% 55% 45% / 55% 45% 55% 45%;
+}
+.sahran_laptop { position: relative; width: 270px; transform: rotate(-4deg); }
+.sahran_laptop_screen {
+  height: 160px;
+  background: linear-gradient(135deg, #0b1a3a, #16336b);
+  border: 6px solid #cfd8e8;
+  border-radius: 10px 10px 0 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.sahran_laptop_screen span { color: #4da3ff; font-size: 52px; font-weight: 800; text-shadow: 0 0 18px #2f80ff; }
+.sahran_laptop_base { height: 12px; background: #b9c4d8; border-radius: 0 0 14px 14px; width: 112%; margin-left: -6%; }
+.sahran_plant { position: absolute; right: 0; bottom: 10px; width: 90px; }
+
+/* ===== SHARED SECTION TITLE ===== */
+.sahran_title { font-size: 22px; margin-bottom: 14px; display: inline-block; position: relative; padding-bottom: 6px; }
+.sahran_title::after { content: ""; position: absolute; left: 0; bottom: 0; width: 60%; height: 3px; background: #1d4ed8; border-radius: 2px; }
+
+/* ===== ABOUT ===== */
+#sahran_about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 36px 48px 20px;
+}
+.sahran_about_text { flex: 1; max-width: 480px; font-size: 14px; color: #3d4a66; }
+.sahran_info_list { list-style: none; display: flex; flex-wrap: wrap; gap: 14px 24px; margin-top: 16px; font-size: 13px; }
+.sahran_photo {
+  position: relative;
+  width: 200px; height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #b7cffb, #7ea6f0);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px rgba(20, 50, 110, .18);
+}
+.sahran_photo_initial { font-size: 56px; font-weight: 800; color: #fff; }
+.sahran_photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* ===== SKILLS ===== */
+#sahran_skills { padding: 20px 48px; }
+.sahran_skill_grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.sahran_skill {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px;
+  background: #f4f7fd;
+  border: 1px solid #e3eaf7;
+  border-radius: 6px;
+  font-size: 13px; font-weight: 600;
+  transition: transform .2s, box-shadow .2s;
+}
+.sahran_skill:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(20, 50, 110, .12); }
+.sahran_skill i {
+  font-style: normal; color: #fff; font-size: 11px; font-weight: 800;
+  min-width: 28px; height: 28px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ===== PROJECTS ===== */
+#sahran_projects { padding: 20px 48px 36px; }
+.sahran_project_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.sahran_card {
+  background: #fff;
+  border: 1px solid #e3eaf7;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(20, 50, 110, .08);
+  transition: transform .2s, box-shadow .2s;
+}
+.sahran_card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(20, 50, 110, .15); }
+.sahran_card_img { height: 90px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 40px; margin-bottom: 8px; }
+.sahran_img_bi { background: linear-gradient(135deg, #d6e6ff, #a9c8f7); }
+.sahran_img_gis { background: linear-gradient(135deg, #cfe8c4, #8fbf7a); }
+.sahran_img_shop { background: linear-gradient(135deg, #cfe5ff, #8ec1ff); }
+.sahran_card h3 { font-size: 13px; }
+.sahran_card p { font-size: 11px; color: #5a6784; margin: 2px 0 6px; }
+.sahran_card a { font-size: 11px; font-weight: 700; color: #1d4ed8; }
+
+/* ===== FOOTER ===== */
+#sahran_footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding: 20px 48px 8px;
+  background: #0f1f45;
+  color: #e6ecf8;
+  font-size: 12px;
+}
+.sahran_footer_brand strong { display: block; font-size: 15px; }
+.sahran_footer_brand strong span { color: #5b9bff; }
+.sahran_footer_brand small { color: #9fb0d4; }
+.sahran_footer_contact { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.sahran_copy { width: 100%; font-size: 10px; color: #8fa0c6; padding: 8px 0 6px; border-top: 1px solid rgba(255, 255, 255, .08); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 820px) {
+  #sahran_home, #sahran_about { flex-direction: column; text-align: center; padding: 28px 24px; }
+  .sahran_intro { margin-left: auto; margin-right: auto; }
+  .sahran_buttons, .sahran_info_list { justify-content: center; }
+  .sahran_name { font-size: 34px; }
+  .sahran_skill_grid { grid-template-columns: repeat(2, 1fr); }
+  .sahran_project_grid { grid-template-columns: repeat(2, 1fr); }
+  #sahran_skills, #sahran_projects { padding-left: 24px; padding-right: 24px; }
+  #sahran_header { padding: 12px 18px; }
+  .sahran_menu { gap: 14px; }
+  #sahran_footer { padding: 20px 24px 8px; }
+}
